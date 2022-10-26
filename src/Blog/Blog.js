@@ -7,7 +7,7 @@ const Blog = () => {
       <h3 className="text-warning text-center fw-bold">
         Blog Here <hr />
       </h3>
-      <Container>
+      <Container className="mb-5">
         <Row>
           <Col>
             <div className="border border-info rounded text-warning p-4 mb-3">
@@ -70,7 +70,7 @@ const Blog = () => {
         </Row>
         <Row>
           <Col>
-            <div className="border border-info rounded text-warning p-4 mb-3">
+            <div className="border border-info rounded text-warning p-4 mb-5">
               <h3>Q.4: What is Node? How does Node work?</h3>
               <p className="text-black fw-bold">
                 ANS:
