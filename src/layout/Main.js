@@ -1,9 +1,13 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Courses from '../Courses/Courses';
+import Header from '../Header/Header';
 
 const Main = () => {
     return (
         <div>
-            
+            <Header></Header>
+            <Outlet></Outlet>
         </div>
     );
 };
