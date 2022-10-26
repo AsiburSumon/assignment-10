@@ -93,6 +93,7 @@ const Register = () => {
             </>
           }
         />
+        <p className="text-danger">Already have a account? Then <Link to="/login">Login</Link> </p>
       </Form.Group>
       <Button variant="primary" type="submit" disabled={!accepted}>
         Register

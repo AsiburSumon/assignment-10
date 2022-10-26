@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider";
 
 const Login = () => {
@@ -45,6 +45,7 @@ const Login = () => {
         <Form.Label>Password</Form.Label>
         <Form.Control name="password" type="password" placeholder="Password" required/>
       </Form.Group>
+      <p className="text-danger">If you haven't any account please <Link to="/register">Register</Link> </p>
       <Button variant="primary" type="submit">
         Login
       </Button>

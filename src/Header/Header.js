@@ -1,4 +1,5 @@
 import React from "react";
+import './Header.css'
 import { useContext } from "react";
 import { Button, Image } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
@@ -49,7 +50,6 @@ const Header = () => {
                 >
                   Log out
                 </Button>
-                <span className="mt-lg-2 ms-lg-2">{user?.displayName}</span>
               </>
             ) : (
               <>
@@ -69,7 +69,7 @@ const Header = () => {
               >
                 <Image
                   className="ms-lg-2 mt-lg-2"
-                  style={{ height: "30px" }}
+                  style={{ height: "40px", width: '40px' }}
                   roundedCircle
                   src={user?.photoURL}
                 ></Image>
