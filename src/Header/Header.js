@@ -1,11 +1,21 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { useContext } from "react";
+import { Button, Image } from "react-bootstrap";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Context/AuthProvider";
 
 const Header = () => {
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+    .then(()=> {})
+    .catch(error=> console.error(error))
+  }
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -17,8 +27,27 @@ const Header = () => {
             <Nav.Link href="/courses">Courses</Nav.Link>
             <Nav.Link href="/faq">FAQ</Nav.Link>
             <Nav.Link href="/blog">Blog</Nav.Link>
-            <Link className="ms-lg-2 mt-lg-2" to="/login">Login</Link>
-            <Link className="ms-lg-2 mt-lg-2" to="/register">Register</Link>
+            {
+              user?.uid ?
+              <>
+                <Button onClick={handleLogOut} variant="primary" className="ms-2">Log out</Button>
+                <span className="mt-lg-2 ms-lg-2">{user?.displayName}</span>
+              </>
+              :
+              <>
+                <Link className="ms-lg-2 mt-lg-2" to="/login">Login</Link>
+                <Link className="ms-lg-2 mt-lg-2" to="/register">Register</Link>
+              </>
+            }
+            {user?.photoURL ? (
+                <Image className="ms-lg-2 mt-lg-2" 
+                  style={{ height: "30px" }}
+                  roundedCircle
+                  src={user?.photoURL}
+                ></Image>
+              ) : (
+                <FaUser className="ms-lg-2 mt-lg-2"></FaUser>
+              )}
             <Button className="ms-lg-3" variant="dark">Dark</Button>
           </Nav>
         </Navbar.Collapse>
