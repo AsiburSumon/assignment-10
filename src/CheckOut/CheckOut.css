@@ -1,0 +1,14 @@
+.checkout-info{
+    border: 2px solid orange;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    width: 700px;
+    text-align: center;
+    margin-left: 30%;
+}
+@media only screen and (max-width: 680px) {
+    .checkout-info{
+        margin-left: 0;
+        width: 600px;
+    }
+  }

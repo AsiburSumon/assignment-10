@@ -21,7 +21,6 @@ const Course = ({ course }) => {
                 <p>{details}</p>
             }
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
         </Card.Body>
       </Card>
     </div>
