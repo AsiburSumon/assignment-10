@@ -17,7 +17,7 @@ const CourseDetails = () => {
             {({toPdf}) => <Button onClick={toPdf} variant="primary">Download Details of {title}</Button> }
         </Pdf>
       <div>
-        <Card ref={ref} className="course-details" style={{ width: "500px" }}>
+        <Card ref={ref} className="course-details">
           <Card.Img variant="top" src={photo} />
           <Card.Body>
             <Card.Title>{title}</Card.Title>

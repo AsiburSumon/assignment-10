@@ -1,4 +1,10 @@
 .course-details{
     margin: 100px auto;
     color: rgb(247, 175, 41);
+    width: 500px;
 }
+@media only screen and (max-width: 680px) {
+    .course-details{
+        width: 300px;
+    }
+  }

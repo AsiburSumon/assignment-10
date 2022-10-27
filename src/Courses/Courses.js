@@ -16,7 +16,9 @@ const Courses = () => {
           ))}
         </div>
       </div>
-      <RightSideContainer></RightSideContainer>
+      <div className="side-container">
+        <RightSideContainer></RightSideContainer>
+      </div>
     </div>
   );
 };
