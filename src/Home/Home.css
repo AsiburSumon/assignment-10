@@ -1,4 +1,7 @@
-.courses-container{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+.home-container{
+    text-align: center;
+}
+.home-info{
+    text-decoration: none;
+    font-weight: bold;
 }

@@ -1,0 +1,21 @@
+.courses-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.all-courses{
+    margin-left: 40px;
+}
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 680px) {
+    .courses {
+      display: block;
+      margin-bottom: 100px;
+    }
+  }

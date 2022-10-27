@@ -17,7 +17,7 @@ const RightSideContainer = () => {
             <h3>Courses: {courses.length}</h3>
             {
                 courses.map(course => <p key={course.id}>
-                    <Link to={`/courses/${course.id}`}>{course.name}</Link>
+                    <Link to={`/allcourses/${course.id}`}>{course.name}</Link>
                 </p> )
             }
         </div>

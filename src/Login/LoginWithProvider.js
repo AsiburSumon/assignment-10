@@ -1,5 +1,6 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
+import './LoginWithProvider.css';
 import { useContext } from 'react';
 import { Button, ButtonGroup } from 'react-bootstrap';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
@@ -31,13 +32,13 @@ const LoginWithProvider = () => {
     }
 
     return (
-        <div className='d-sm-block ms-sm-5 d-lg-flex  justify-content-center'>
-            <div>
+        <div className='d-sm-block d-lg-flex  justify-content-center'>
+            <div className='provider'>
             <ButtonGroup vertical>
                 <Button onClick={handleGoogleSignIn} className='mb-2 me-3' variant='outline-primary'> <FaGoogle></FaGoogle> Login with Google</Button>
             </ButtonGroup>
             </div>
-            <div>
+            <div className='provider'>
             <ButtonGroup vertical>
                 <Button onClick={handleGithubSignIn} className='mb-2 me-3' variant='outline-primary'> <FaGithub></FaGithub> Login with GitHub</Button>
             </ButtonGroup>

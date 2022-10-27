@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-import { useState } from "react";
 
 const Header = () => {
+  // const course = useLoaderData();
   const { user, logOut, toggle } = useContext(AuthContext);
 
   const handleLogOut = () => {
@@ -45,9 +45,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/courses">Courses</Nav.Link>
-            <Nav.Link href="/faq">FAQ</Nav.Link>
-            <Nav.Link href="/blog">Blog</Nav.Link>
+            <Link className="ms-lg-2 mt-lg-2" to={`/allcourses`}>Courses</Link>
+            <Link className="ms-lg-2 mt-lg-2" to="/faq">FAQ</Link>
+            <Link className="ms-lg-2 mt-lg-2" to="/blog">Blog</Link>
             {user?.uid ? (
               <>
                 <Button
