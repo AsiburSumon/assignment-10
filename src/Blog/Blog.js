@@ -12,7 +12,7 @@ const Blog = () => {
           <Col>
             <div className="border border-info rounded text-warning p-4 mb-3">
               <h3>Q.1: what is cors ?</h3>
-              <p className="text-black fw-bold">
+              <p className="text-dark fw-bold">
                 ANS:
                 <small className="ps-2">
                   Cross-Origin Resource Sharing (CORS) is an HTTP-header based
@@ -31,7 +31,7 @@ const Blog = () => {
                 Q.2: Why are you using firebase? What other options do you have
                 to implement authentication?
               </h3>
-              <p className="text-black fw-bold">
+              <p className="text-dark fw-bold">
                 ANS:
                 <small className="ps-2">
                     The Firebase Realtime Database let us build rich, collaborative applications by allowing secure access to the database directly from client-side code. Data is persisted locally, and even while offline, realtime events continue to fire, giving the end user a responsive experience. <br />
@@ -59,7 +59,7 @@ const Blog = () => {
           <Col>
             <div className="border border-info rounded text-warning p-4 mb-3">
               <h3>Q.3: How does the private route work ?</h3>
-              <p className="text-black fw-bold">
+              <p className="text-dark fw-bold">
                 ANS:
                 <small className="ps-2">
                     The private route component is similar to the public route, the only change is that redirect URL and authenticate condition. If the user is not authenticated he will be redirected to the login page and the user can only access the authenticated routes If he is authenticated (Logged in).
@@ -72,7 +72,7 @@ const Blog = () => {
           <Col>
             <div className="border border-info rounded text-warning p-4 mb-5">
               <h3>Q.4: What is Node? How does Node work?</h3>
-              <p className="text-black fw-bold">
+              <p className="text-dark fw-bold">
                 ANS:
                 <small className="ps-2">
                     Node. js is a JavaScript runtime environment that achieves low latency and high throughput by taking a “non-blocking” approach to serving requests. <br />

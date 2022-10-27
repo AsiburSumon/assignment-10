@@ -31,7 +31,7 @@ const LoginWithProvider = () => {
     }
 
     return (
-        <div className='d-flex justify-content-center'>
+        <div className='d-sm-block ms-sm-5 d-lg-flex  justify-content-center'>
             <div>
             <ButtonGroup vertical>
                 <Button onClick={handleGoogleSignIn} className='mb-2 me-3' variant='outline-primary'> <FaGoogle></FaGoogle> Login with Google</Button>

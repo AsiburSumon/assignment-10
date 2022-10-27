@@ -1,18 +1,13 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
 import Courses from '../Courses/Courses';
+import RightSideContainer from '../RightSideContainer/RightSideContainer';
+import './Home.css'
 
 const Home = () => {
     return (
-        <div>
-            <Row>
-                <Col lg='10'>
-                    <Courses></Courses>
-                </Col>
-                <Col lg='2'>
-                    <h3>Side bar</h3>
-                </Col>
-            </Row>
+        <div className='courses-container'>
+            <Courses></Courses>
+            <RightSideContainer></RightSideContainer>
         </div>
     );
 };

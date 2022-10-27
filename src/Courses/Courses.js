@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
+import './Courses.css'
 
 const Courses = () => {
-    return (
-        <div>
-            <h3>This is courses</h3>
-        </div>
-    );
+  return (
+    <div>
+      <div>
+        <h3>Courses</h3>
+      </div>
+    </div>
+  );
 };
 
 export default Courses;

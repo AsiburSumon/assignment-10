@@ -1,5 +1,5 @@
 import React from "react";
-import './Header.css'
+import "./Header.css";
 import { useContext } from "react";
 import { Button, Image } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
@@ -10,9 +10,10 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/AuthProvider";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+import { useState } from "react";
 
 const Header = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, toggle } = useContext(AuthContext);
 
   const handleLogOut = () => {
     logOut()
@@ -21,9 +22,15 @@ const Header = () => {
   };
   const renderTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-      {user?.displayName || 'login first'}
+      {user?.displayName || "login first"}
     </Tooltip>
   );
+
+  const darkMode = () => {
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+  };
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -69,7 +76,7 @@ const Header = () => {
               >
                 <Image
                   className="ms-lg-2 mt-lg-2"
-                  style={{ height: "40px", width: '40px' }}
+                  style={{ height: "40px", width: "40px" }}
                   roundedCircle
                   src={user?.photoURL}
                 ></Image>
@@ -80,12 +87,26 @@ const Header = () => {
                 delay={{ show: 50, hide: 400 }}
                 overlay={renderTooltip}
               >
-                <FaUser className="ms-lg-2 mt-lg-2 my-sm-3"></FaUser>
+                <FaUser className="text-success ms-lg-2 mt-lg-2 my-sm-3"></FaUser>
               </OverlayTrigger>
             )}
-            <Button className="ms-lg-3" variant="dark">
-              Dark
-            </Button>
+            { toggle?
+                (
+                  <>
+                <Button onClick={darkMode} className="ms-lg-3" variant="dark">
+                  Dark
+                </Button>
+                </>
+                )
+                :
+                (
+                <>
+                <Button className="ms-lg-3" variant="light">
+                  Light
+                </Button>
+                </>
+                )
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>
