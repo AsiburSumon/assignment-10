@@ -1,3 +1,7 @@
+#img{
+    width: 500px;
+    height: 500px;
+}
 .checkout-info{
     border: 2px solid orange;
     border-radius: 10px;
